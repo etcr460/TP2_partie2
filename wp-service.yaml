@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: wordpress-service
+spec:
+  selector:
+    app: wp-3
+  ports:
+    - protocol: TCP
+      port: 80
+  type: NodePort

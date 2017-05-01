@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: wp-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /wordpress
+        backend:
+          serviceName: wordpress-service
+          servicePort: 80
